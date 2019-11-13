@@ -32,5 +32,4 @@ process_status_scheduler = BashOperator(task_id='ps.scheduler.server',
                                         bash_command='ps -eaf | grep scheduler',
                                         dag=dag)
 
-process_status_web.set_upstream(process_status_worker)
-process_status_worker.set_upstream(process_status_scheduler)
+process_status_scheduler >> process_status_worker >> process_status_web
