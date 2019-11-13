@@ -1,7 +1,0 @@
-#!/Users/gauthier/PycharmProjects/airflow_test/venv/bin/python
-import json_merge_patch.cli
-json_merge_patch.cli.main()
-
-
-
-
